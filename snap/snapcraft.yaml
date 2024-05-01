@@ -1,4 +1,4 @@
-name: superalpaca-test-snapcraft-06
+name: superalpaca-test-snapcraft-07
 base: core22
 adopt-info: htop
 summary: Interactive processes viewer
