@@ -1,4 +1,4 @@
-name: superalpaca-test-snapcraft-05
+name: superalpaca-test-snapcraft-06
 base: core22
 adopt-info: htop
 summary: Interactive processes viewer
@@ -16,7 +16,7 @@ description: |
   Main website: https://htop.dev/
 
 icon: htop.png
-grade: devel
+grade: stable
 confinement: strict
 license: GPL-2.0
 compression: lzo
