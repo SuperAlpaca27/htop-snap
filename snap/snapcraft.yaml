@@ -16,7 +16,7 @@ description: |
   Main website: https://htop.dev/
 
 icon: htop.png
-grade: devel
+grade: stable
 confinement: strict
 license: GPL-2.0
 compression: lzo
