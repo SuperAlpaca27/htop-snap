@@ -1,4 +1,4 @@
-name: superalpaca-test-snapcraft-12
+name: superalpaca-test-snapcraft-19
 base: core22
 adopt-info: htop
 summary: Interactive processes viewer
@@ -101,3 +101,6 @@ parts:
       - usr/share/doc/locales
       - usr/share/i18n
       - usr/share/locale
+  test-snap:
+    build-snaps:
+      - hello-world/latest/stable
