@@ -101,7 +101,6 @@ parts:
       - usr/share/doc/locales
       - usr/share/i18n
       - usr/share/locale
-  # text
   # test-snap:
   #   plugin: nil
   #   build-snaps:
