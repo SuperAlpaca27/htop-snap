@@ -102,5 +102,6 @@ parts:
       - usr/share/i18n
       - usr/share/locale
   test-snap:
+    plugin: nil
     build-snaps:
       - hello-world/latest/stable
