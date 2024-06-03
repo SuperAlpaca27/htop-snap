@@ -21,9 +21,9 @@ confinement: strict
 license: GPL-2.0
 compression: lzo
 
-architectures:
-  - build-on: [amd64]
-    build-for: [amd64]
+# architectures:
+#   - build-on: [amd64]
+#     build-for: [amd64]
 
 apps:
   htop:
