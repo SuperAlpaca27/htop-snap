@@ -58,6 +58,8 @@ parts:
     override-build: |
       craftctl set version=$(git describe --tags --long)
       craftctl default
+      echo "Listing snaps:"
+      snap list
     build-snaps:
       - go/1.13/stable
     build-packages:
