@@ -72,6 +72,12 @@ parts:
       craftctl default
       echo "Listing snaps:"
       snap list
+      echo "Proxy settings:"
+      echo "HTTP"
+      snap get system proxy.http || true
+      echo "HTTPS"
+      snap get system proxy.https || true
+      env
     build-snaps:
       - go/1.13/stable
     build-packages:
