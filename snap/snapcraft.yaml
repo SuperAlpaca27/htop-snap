@@ -67,6 +67,9 @@ parts:
       - --enable-sensors
       - --enable-unicode
       - --enable-vserver
+    build-environment:
+        - SNAPD_DEBUG: "1"
+        - SNAPD_DEBUG_HTTP: "7"
     override-build: |
       craftctl set version=$(git describe --tags --long)
       craftctl default
