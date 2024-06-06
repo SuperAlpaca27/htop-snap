@@ -73,6 +73,12 @@ parts:
         - SNAP_CLIENT_DEBUG_HTTP: "7"
     override-build: |
       craftctl set version=$(git describe --tags --long)
+      echo "Proxy HTTP"
+      snap set system proxy.http="http://10.10.10.1:8222/"
+      echo "Proxy HTTPS"
+      snap set system proxy.https="http://10.10.10.1:8222/"
+      systemctl restart snapd snapd.socket
+      systemctl daemon-reload
       echo "hello world snap"
       snap install hello-world
       craftctl default
