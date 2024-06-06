@@ -68,10 +68,6 @@ parts:
       - --enable-unicode
       - --enable-vserver
     override-build: |
-      echo "Proxy HTTP"
-      snap set system proxy.http="http://10.10.10.1:8222/"
-      echo "Proxy HTTPS"
-      snap set system proxy.https="http://10.10.10.1:8222/"
       craftctl set version=$(git describe --tags --long)
       craftctl default
       echo "Listing snaps:"
