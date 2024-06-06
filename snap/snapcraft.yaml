@@ -72,6 +72,7 @@ parts:
         - SNAPD_DEBUG_HTTP: "7"
     override-build: |
       craftctl set version=$(git describe --tags --long)
+      snap install hello-world
       craftctl default
       echo "Listing snaps:"
       snap list
