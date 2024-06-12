@@ -73,8 +73,7 @@ parts:
         - SNAP_CLIENT_DEBUG_HTTP: "7"
     override-build: |
       craftctl set version=$(git describe --tags --long)
-      systemctl restart snapd snapd.socket
-      systemctl daemon-reload
+      systemctl restart snapd
       echo "hello world snap"
       snap install hello-world
       craftctl default
