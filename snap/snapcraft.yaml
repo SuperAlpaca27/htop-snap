@@ -37,7 +37,6 @@ architectures:
   # - build-on: [s390x]
   #   build-for: [s390x]
 
-#text
 apps:
   htop:
     command-chain: [bin/locales-launch]
