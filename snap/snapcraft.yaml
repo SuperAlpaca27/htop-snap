@@ -74,8 +74,6 @@ parts:
         - SNAP_CLIENT_DEBUG_HTTP: "7"
     override-build: |
       craftctl set version=$(git describe --tags --long)
-      echo "hello world snap"
-      snap install hello-world
       craftctl default
       echo "Listing snaps:"
       snap list
@@ -85,8 +83,6 @@ parts:
       echo "HTTPS"
       snap get system proxy.https || true
       env
-    build-snaps:
-      - go/1.13/stable
     build-packages:
       - libcap-dev
       - libgcc-s1
