@@ -23,9 +23,9 @@ compression: lzo
 
 architectures:
   - build-on: [amd64]
-    build-for: [amd64]
-  - build-on: [arm64]
-    build-for: [arm64]
+    build-for: [amd64,arm64,s390x]
+  # - build-on: [arm64]
+  #   build-for: [arm64]
   # - build-on: [armhf]
   #   build-for: [armhf]
   # - build-on: [i386]
