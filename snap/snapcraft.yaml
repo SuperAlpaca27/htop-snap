@@ -83,7 +83,7 @@ parts:
       snap get system proxy.https || true
       env
     build-snaps:
-      - core22/latest/stable
+      - core24/latest/stable
     build-packages:
       - libcap-dev
       - libgcc-s1
