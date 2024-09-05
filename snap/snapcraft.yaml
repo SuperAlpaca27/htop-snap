@@ -81,6 +81,9 @@ parts:
       snap get system proxy.http || true
       echo "HTTPS"
       snap get system proxy.https || true
+      echo "List of apt packages installed:"
+      apt list --installed
+      echo "List of environment variables"
       env
     build-snaps:
       - core24/latest/stable
