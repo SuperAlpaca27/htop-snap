@@ -83,6 +83,8 @@ parts:
       snap get system proxy.https || true
       echo "List of apt packages installed:"
       apt list --installed
+      echo "Current Ubuntu release:"
+      lsb_release -a
       echo "List of environment variables"
       env
     build-snaps:
