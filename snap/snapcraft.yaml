@@ -84,7 +84,7 @@ parts:
       echo "List of apt packages installed:"
       apt list --installed
       echo "Current Ubuntu release:"
-      lsb_release -a
+      cat /etc/lsb-release /etc/os-release
       echo "List of environment variables"
       env
     build-snaps:
