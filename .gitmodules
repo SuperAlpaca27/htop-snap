@@ -1,3 +1,0 @@
-[submodule "snapcraft"]
-	path = snapcraft
-	url = https://github.com/canonical/snapcraft
