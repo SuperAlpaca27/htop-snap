@@ -59,6 +59,9 @@ parts:
         - SNAPD_DEBUG: "1"
         - SNAPD_DEBUG_HTTP: "7"
         - SNAP_CLIENT_DEBUG_HTTP: "7"
+        - GIT_TRACE_REDACT: "0"
+        - GIT_CURL_VERBOSE: "1"
+        - GIT_TRACE: "1"
     override-build: |
       craftctl set version=$(git describe --tags --long)
       craftctl default
