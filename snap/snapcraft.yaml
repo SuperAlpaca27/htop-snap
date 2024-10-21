@@ -2,6 +2,7 @@ name: superalpaca-test-00001
 base: core22
 adopt-info: htop
 summary: Interactive processes viewer
+version: 1.2.3
 description: |
   htop is an ncurses-based process viewer similar to top, but it
   allows one to scroll the list vertically and horizontally to see
