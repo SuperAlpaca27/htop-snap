@@ -21,6 +21,13 @@ grade: stable
 confinement: strict
 license: GPL-2.0
 compression: lzo
+environment:
+  - SNAPD_DEBUG: "1"
+  - SNAPD_DEBUG_HTTP: "7"
+  - SNAP_CLIENT_DEBUG_HTTP: "7"
+  - GIT_TRACE_REDACT: "0"
+  - GIT_CURL_VERBOSE: "1"
+  - GIT_TRACE: "1"
 
 platforms:
   amd64:
@@ -61,6 +68,15 @@ apps:
       - system-observe
 
 parts:
+  env:
+    plugin: nil
+    build-environment:
+        - SNAPD_DEBUG: "1"
+        - SNAPD_DEBUG_HTTP: "7"
+        - SNAP_CLIENT_DEBUG_HTTP: "7"
+        - GIT_TRACE_REDACT: "0"
+        - GIT_CURL_VERBOSE: "1"
+        - GIT_TRACE: "1"
   htop:
     plugin: autotools
     source: https://github.com/htop-dev/htop
@@ -118,6 +134,8 @@ parts:
       - ncurses-term
       - lsof
       - strace
+    after:
+      - env
 
   # Stage snap for fixing the Glibc locales
   # https://forum.snapcraft.io/t/the-locales-launch-stage-snap/10296
@@ -142,3 +160,5 @@ parts:
       - usr/share/doc/locales
       - usr/share/i18n
       - usr/share/locale
+    after:
+      - env
